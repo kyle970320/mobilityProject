@@ -1,0 +1,38 @@
+.detail > li {
+  padding-left: 20px;
+}
+.detail > li:nth-child(1) {
+  padding-left: 0;
+}
+.detail > li:nth-child(2) {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.detail > li:nth-child(3) {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.detail > li:nth-child(4) {
+  margin-left: 75%;
+}
+.detail > li img {
+  width: 100%;
+}
+
+.toggle {
+  background-color: #0094FF;
+}
+.toggle summary {
+  list-style: none;
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
+}
+.toggle ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+}
+.toggle ul li span:nth-child(1) {
+  font-weight: 600;
+}
