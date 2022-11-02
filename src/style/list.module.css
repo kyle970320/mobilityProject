@@ -1,0 +1,37 @@
+.btnBox {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px 0;
+  justify-content: space-evenly;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+.btnBox button {
+  padding: 5px 20px;
+  background-color: #CCC;
+  border-radius: 15px;
+  font-weight: bold;
+}
+.btnBox button:focus {
+  background-color: black;
+  color: white;
+}
+
+.link {
+  display: flex;
+  border-bottom: 1.5px solid black;
+}
+.link ul {
+  box-sizing: border-box;
+  padding: 15px 20px;
+  width: 50%;
+}
+.link ul li:nth-child(2) {
+  margin-bottom: 5px;
+}
+.link figure {
+  width: 50%;
+}
+.link figure img {
+  width: 100%;
+}
