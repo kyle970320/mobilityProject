@@ -1,11 +1,11 @@
 import React from 'react';
 
-const App = () => {
+const Routing = () => {
   return (
     <div>
-      asdasdfads
+      
     </div>
   );
 };
 
-export default App;
+export default Routing;
