@@ -20,7 +20,7 @@ const ListDetail = () => {
         <ul>
           <li><span>차종</span><span>{detailAttribute.segment}</span></li>
           <li><span>연료</span><span>{detailAttribute.fuelType}</span></li>
-          <li><span>이용 가능일</span><span>{detailLocation.state.startDate}</span></li>
+          <li><span>이용 가능일</span><span>{(detailLocation.state.startDate).split('T')[0]}</span></li>
         </ul>
       </details>
       <details className={style.toggle}>

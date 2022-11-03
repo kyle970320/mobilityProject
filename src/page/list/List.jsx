@@ -1,59 +1,37 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../../comp/Loading';
 import AxiosApi from '../../utils/AxiosApi';
 import style from '../../style/list.module.css'
-import { useRef } from 'react';
+import { changeFuelType, changeSeg } from '../../utils/changeFunc';
 
 const List = () => {
-  const [stateLoading, setLoading] = useState()
-  const [stateList, setList] = useState()
-  const containerRef = useRef()
-
-  const changeSeg = (seg) => {
-    if (seg == 'C') {
-      return '소형';
-    } else if (seg == 'D') {
-      return '중형';
-    } else if (seg == 'E') {
-      return '대형';
-    } else {
-      return 'SUV';
-    }
-  }
-
-  const changeFuelType = (type) => {
-    if (type == 'gasoline') {
-      return '가솔린';
-    } else if (type == 'ev') {
-      return '전기';
-    } else {
-      return '하이브리드';
-    }
-  }
+  const [stateLoading, setLoading] = useState();
+  const [stateList, setList] = useState();
+  const containerRef = useRef();
 
   const moveLeft = () => {
-    containerRef.current.style.transform = 'translateX(-100%)'
-    containerRef.current.style.transition = 'all 0.5s'
+    containerRef.current.style.transform = 'translateX(-100%)';
+    containerRef.current.style.transition = 'all 0.5s';
   }
 
   const moveRight = () => {
-    containerRef.current.style.transform = 'translateX(0%)'
+    containerRef.current.style.transform = 'translateX(0%)';
+    containerRef.current.style.transition = 'all 0.5s';
   }
 
   const getList = async (fuelType, segment) => {
-    setLoading(true)
+    setLoading(true);
     const listData = await AxiosApi(fuelType, segment);
-    setList(listData.data.payload)
+    setList(listData.data.payload);
     setTimeout(()=>{
-      setLoading(false)
-    },1000)
+      setLoading(false);
+    },1000);
     return listData.data;
   }
 
   useEffect(() => {
-    getList()
+    getList();
   }, [])
 
   return (
