@@ -1,18 +1,48 @@
 .btnBox{
-  display: flex;
+  position: relative;
   margin: 0 auto;
   padding: 10px 0;
-  justify-content: space-evenly;
+  overflow: hidden;
   border-top: 1px solid #D9D9D9;
   border-bottom: 1px solid #D9D9D9;
-  button{
-    padding: 5px 20px;
+  >button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 50%;
+    opacity: 0.3;
     background-color: #D9D9D9;
-    border-radius: 15px;
-    font-weight: bold;
-    &:focus{
-      background-color: black;
-      color: white;
+    &:active{
+      opacity: 1;
+    }
+    &:nth-of-type(1){
+      top: 25%;
+      left: 1%;
+
+    }
+    &:nth-of-type(2){
+      top: 25%;
+      right: 1%;
+    }
+  }
+  >div{
+    display: flex;
+    button{
+      flex-shrink: 0;
+      flex-basis: 25%;
+      margin-left: 4%;
+      margin-right: 4%;
+      padding: 10px;
+      background-color: #D9D9D9;
+      border-radius: 25px;
+      font-weight: bold;
+      &:focus{
+        background-color: black;
+        color: white;
+      }
     }
   }
 }

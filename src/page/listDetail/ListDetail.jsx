@@ -5,9 +5,6 @@ import style from '../../style/listDetail.module.css'
 const ListDetail = () => {
   const detailLocation = useLocation()
   const detailAttribute = detailLocation.state.attribute
-  console.log(detailAttribute)
-  console.log(detailLocation.state)
-  // console.log(detailAttribute.imageUrl)
   return (
     <div>
       <ul className={style.detail}>
